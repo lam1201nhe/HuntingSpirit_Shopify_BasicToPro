@@ -117,6 +117,58 @@
         "padding_bottom": 12
       }
     },
+    "collapsible_content_cDiWMJ": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_8aQgbY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_ci9Gac": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_bQYYPp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_8aQgbY",
+        "collapsible_row_ci9Gac",
+        "collapsible_row_bQYYPp"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "row",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "17419386735f19726f": {
       "type": "apps",
       "blocks": {
@@ -153,6 +205,7 @@
   },
   "order": [
     "main",
+    "collapsible_content_cDiWMJ",
     "17419386735f19726f",
     "related-products"
   ]
