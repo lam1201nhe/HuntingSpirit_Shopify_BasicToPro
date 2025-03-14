@@ -1016,7 +1016,7 @@ a.product__text {
   }
 
   .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
-    width: calc(20% - 0.8rem);
+    width: calc(15% - 0.8rem);
   }
 }
 
@@ -1094,6 +1094,10 @@ a.product__text {
 
 .js .product__media {
   overflow: hidden !important;
+}
+
+.product__media img {
+  object-fit: contain;
 }
 
 .thumbnail[aria-current]:focus-visible {
