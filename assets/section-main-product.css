@@ -192,7 +192,7 @@ product-info {
 .product-form__submit:hover {
   background-color: #fff;
   color: #28544B;
-  border: 1px solid #000;
+  border: 0.5px solid #121212;
 }
 
 .product-form__submit {
