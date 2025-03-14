@@ -303,6 +303,15 @@
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 14px;
+  /* Cố định */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn chính xác 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.4em; /* Chiều cao cố định cho 2 dòng */
+  /* line-height: 1.2; /* Line height phù hợp */
+  /* margin-bottom: 10px; /* Khoảng cách đến phần giá */ */
 }
 
 .card__heading:last-child {

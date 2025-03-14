@@ -86,7 +86,8 @@
 
 .price--on-sale .price-item--regular {
   text-decoration: line-through;
-  color: rgba(var(--color-foreground), 0.75);
+  /* color: rgba(var(--color-foreground), 0.75); */
+  color: #A20200;
   font-size: 1.3rem;
 }
 
