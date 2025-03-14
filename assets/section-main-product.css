@@ -189,8 +189,17 @@ product-info {
   right: 1.5rem;
 }
 
+.product-form__submit:hover {
+  background-color: #fff;
+  color: #28544B;
+  border: 1px solid #000;
+}
+
 .product-form__submit {
   margin-bottom: 1rem;
+  background-color: #28544B;
+  color: #fff;
+  border: none;
 }
 
 .product-form__submit[aria-disabled='true'] + .shopify-payment-button .shopify-payment-button__button[disabled],
@@ -248,10 +257,6 @@ a.product__text {
 .product__title {
   word-break: break-word;
   margin-bottom: 1.5rem;
-}
-
-.product__title h1 {
-  font-size: 25px;
 }
 
 .product__title > * {
