@@ -1,0 +1,132 @@
+<style>
+.product-type-selector {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  /*margin: 20px 0;*/
+}
+
+.type-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /*padding: 15px;*/
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+}
+
+.type-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.type-option.active {
+  border: 2px solid #e74c3c;
+}
+
+.type-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .product-type-selector {
+    flex-wrap: wrap;
+  }
+  
+  .type-option {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+  }
+}
+
+.quick-add-modal__content .product-type-selector {
+  display: none !important;
+} 
+</style>
+
+<div class="product-type-selector">
+  <div class="type-option" data-type="t-shirt">
+    <img src="https://cdn.shopify.com/s/files/1/0650/0660/0234/files/a-simple-line-drawing-of-a-t-shirt-in-a-_Nrb9u_O4Sz-kngKcq5V5qQ_MajbXnNrQo-io9j6jX2bQQ.png?v=1740627452" alt="T-Shirt">
+    <!--<span>T-Shirt</span>-->
+  </div>
+  <div class="type-option" data-type="long-sleeve-t-shirt">
+    <img src="https://cdn.shopify.com/s/files/1/0650/0660/0234/files/a-simple-line-drawing-of-a-long-sleeved-_4dlcbx4XRC6fINmEsOCAbQ_56jtfWh6Tcmwsn-Y0Kauww.png?v=1740627452" alt="Long Sleeves">
+    <!--<span>Long Sleeves</span>-->
+  </div>
+  <div class="type-option" data-type="sweatshirt">
+    <img src="https://cdn.shopify.com/s/files/1/0650/0660/0234/files/a-simple-line-drawing-of-a-sweatshirt-in_th9D695VRI2q_Fat_GVvnA_nUh6WAi5Sm-eCD45ne2LZQ.png?v=1740627452" alt="Sweatshirt">
+    <!--<span>Sweatshirt</span>-->
+  </div>
+  <div class="type-option" data-type="hoodie">
+    <img src="https://cdn.shopify.com/s/files/1/0650/0660/0234/files/a-line-drawing-of-a-hoodie-in-a-front-vi_iLqq2UqRTMi5XO2GXUK3qA_N1DYB0hjQbS6uj_1OfUnkQ.png?v=1740627451" alt="Hoodie">
+    <!--<span>Hoodie</span>-->
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const productTypeSelector = document.querySelector('.product-type-selector');
+  const typeOptions = document.querySelectorAll('.type-option');
+  const currentUrl = window.location.href;
+  
+  // Xác định loại áo hiện tại từ URL
+  const productTypes = ['t-shirt', 'long-sleeve-t-shirt', 'sweatshirt', 'hoodie'];
+  let currentType = '';
+  let foundProductType = false;
+  
+  // Kiểm tra xem URL có chứa bất kỳ loại áo nào không
+  for (const type of productTypes) {
+    if (currentUrl.includes(type)) {
+      currentType = type;
+      foundProductType = true;
+      break;
+    }
+  }
+  
+  // Nếu không tìm thấy loại áo nào trong URL, ẩn toàn bộ bộ chọn
+  if (!foundProductType) {
+    if (productTypeSelector) {
+      productTypeSelector.style.display = 'none';
+    }
+    return; // Dừng xử lý tiếp theo
+  }
+  
+  // Nếu tìm thấy loại áo, đánh dấu nút active tương ứng
+  if (currentType) {
+    const activeOption = document.querySelector(`.type-option[data-type="${currentType}"]`);
+    if (activeOption) {
+      activeOption.classList.add('active');
+    }
+  }
+  
+  // Thêm sự kiện click cho các nút
+  typeOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      const newType = this.getAttribute('data-type');
+      let newUrl = currentUrl;
+      
+      // Thay thế loại áo trong URL
+      for (const type of productTypes) {
+        if (currentUrl.includes(type)) {
+          newUrl = newUrl.replace(type, newType);
+          window.location.href = newUrl;
+          return;
+        }
+      }
+      
+      // Nếu không tìm thấy loại áo nào trong URL, thêm loại mới vào
+      const baseUrl = currentUrl.split('?')[0];
+      window.location.href = `${baseUrl.replace(/\/$/, '')}/${newType}${currentUrl.includes('?') ? '?' + currentUrl.split('?')[1] : ''}`;
+    });
+  });
+});
+
+</script>

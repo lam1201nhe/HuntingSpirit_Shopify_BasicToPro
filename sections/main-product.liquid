@@ -461,7 +461,9 @@
                   assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin
                   render 'share-button', block: block, share_link: share_url
                 %}
-
+                {%- when 'product_type' -%}
+                  {%- render 'product-type-option' -%}
+                {%- when 'variant_picker' -%}
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
@@ -848,6 +850,11 @@
     {
       "type": "quantity_selector",
       "name": "t:sections.main-product.blocks.quantity_selector.name",
+      "limit": 1
+    },
+    {
+      "type": "product_type",
+      "name": "t:sections.main-product.blocks.product_type.name",
       "limit": 1
     },
     {

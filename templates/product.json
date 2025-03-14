@@ -27,6 +27,10 @@
           "type": "price",
           "settings": {}
         },
+        "product_type": {
+          "type": "product_type",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -60,6 +64,7 @@
         "vendor",
         "title",
         "price",
+        "product_type",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
