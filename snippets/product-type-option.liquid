@@ -20,6 +20,7 @@
   background-color: white;
 }
 
+
 .type-option:hover {
   transform: scale(1.05);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -27,6 +28,38 @@
 
 .type-option.active {
   border: 2px solid #e74c3c;
+}
+
+/* Thêm style cho trạng thái disabled */
+.type-option.disabled {
+  cursor: not-allowed;
+  opacity: 0.5; /* Làm mờ phần tử */
+  background-color: #f5f5f5; /* Nền xám nhạt */
+  border: 1px solid #e0e0e0;
+  transform: none; /* Không scale khi hover */
+}
+
+.type-option.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Thêm overlay "Coming Soon" cho các tùy chọn disabled */
+.type-option.disabled::after {
+  content: "Coming Soon";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 3px;
 }
 
 .type-option img {
@@ -57,15 +90,15 @@
     <img src="https://cdn.shopify.com/s/files/1/0650/0660/0234/files/a-simple-line-drawing-of-a-t-shirt-in-a-_Nrb9u_O4Sz-kngKcq5V5qQ_MajbXnNrQo-io9j6jX2bQQ.png?v=1740627452" alt="T-Shirt">
     <!--<span>T-Shirt</span>-->
   </div>
-  <div class="type-option" data-type="long-sleeve-t-shirt">
+  <div class="type-option disabled" data-type="long-sleeve-t-shirt">
     <img src="https://cdn.shopify.com/s/files/1/0650/0660/0234/files/a-simple-line-drawing-of-a-long-sleeved-_4dlcbx4XRC6fINmEsOCAbQ_56jtfWh6Tcmwsn-Y0Kauww.png?v=1740627452" alt="Long Sleeves">
     <!--<span>Long Sleeves</span>-->
   </div>
-  <div class="type-option" data-type="sweatshirt">
+  <div class="type-option disabled" data-type="sweatshirt">
     <img src="https://cdn.shopify.com/s/files/1/0650/0660/0234/files/a-simple-line-drawing-of-a-sweatshirt-in_th9D695VRI2q_Fat_GVvnA_nUh6WAi5Sm-eCD45ne2LZQ.png?v=1740627452" alt="Sweatshirt">
     <!--<span>Sweatshirt</span>-->
   </div>
-  <div class="type-option" data-type="hoodie">
+  <div class="type-option disabled" data-type="hoodie">
     <img src="https://cdn.shopify.com/s/files/1/0650/0660/0234/files/a-line-drawing-of-a-hoodie-in-a-front-vi_iLqq2UqRTMi5XO2GXUK3qA_N1DYB0hjQbS6uj_1OfUnkQ.png?v=1740627451" alt="Hoodie">
     <!--<span>Hoodie</span>-->
   </div>
@@ -126,6 +159,12 @@
       const baseUrl = currentUrl.split('?')[0];
       window.location.href = `${baseUrl.replace(/\/$/, '')}/${newType}${currentUrl.includes('?') ? '?' + currentUrl.split('?')[1] : ''}`;
     });
+  });
+
+  // Thêm thông báo khi hover vào các tùy chọn disabled
+  const disabledOptions = document.querySelectorAll('.type-option.disabled');
+  disabledOptions.forEach(option => {
+    option.setAttribute('title', 'Coming Soon');
   });
 });
 
