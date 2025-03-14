@@ -11,6 +11,90 @@
   display: block;
 }
 
+/* COMMENT */
+@media screen and (max-width: 749px) {
+  .footer-block__heading {
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Thêm icon toggle vào after của heading */
+  .footer-block__heading::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 31%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M2 4L6 8L10 4" stroke="white" stroke-width="1" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+
+  /* Loại bỏ toggle button cho phần newsletter */
+  .footer-block--newsletter .footer-block__heading::after {
+    content: none;
+  }
+  
+  .footer-block--newsletter .footer-block__heading {
+    cursor: default;
+  }
+
+  /* Loại bỏ toggle button cho phần brand infor */
+  .footer-block__brand-info .footer-block__heading::after {
+    content: none;
+  }
+  
+  .footer-block__brand-info .footer-block__heading {
+    cursor: default;
+  }
+
+  /* Xoay icon khi active */
+  .footer-block__heading.is-active::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  /* Ẩn menu content mặc định trên mobile */
+  .footer-block__details-content {
+    display: none;
+    padding-top: 10px;
+  }
+
+  /* Hiện menu content khi active */
+  .footer-block__details-content.is-active {
+    display: block;
+  }
+
+  /* Loại trừ brand information block khỏi các style mobile */
+  .footer-block--brand .footer-block__heading::after,
+  .footer-block--brand .footer-block__heading {
+    content: none;
+    cursor: default;
+  }
+
+  .footer-block--brand .footer-block__details-content {
+    display: block !important;
+  }
+}
+
+/* Đảm bảo reset lại các style khi trở về desktop */
+@media screen and (min-width: 750px) {
+  .footer-block__heading {
+    cursor: default;
+  }
+
+  .footer-block__heading::after {
+    content: none;
+  }
+
+  .footer-block__details-content {
+    display: block !important;
+  }
+}
+/* COMMENT */
+
 @media screen and (max-width: 749px) {
   .footer .grid {
     display: block;
@@ -86,7 +170,7 @@
   }
 }
 
-.footer__column {
+/* .footer__column {
   width: 100%;
   align-items: flex-end;
 }
@@ -98,12 +182,13 @@
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
-}
+} */
 
 @media screen and (min-width: 750px) {
   .footer__column--info {
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 20px;
+    margin-bottom: 8px;
     align-items: flex-end;
   }
 }
