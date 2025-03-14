@@ -27,10 +27,6 @@
           "type": "price",
           "settings": {}
         },
-        "product_type": {
-          "type": "product_type",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -64,7 +60,6 @@
         "vendor",
         "title",
         "price",
-        "product_type",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -76,7 +71,7 @@
         "color_scheme": "scheme-1",
         "media_size": "large",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "show",
         "media_position": "left",
