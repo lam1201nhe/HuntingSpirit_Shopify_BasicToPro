@@ -27,6 +27,10 @@
           "type": "price",
           "settings": {}
         },
+        "product_type_VYfx8A": {
+          "type": "product_type",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -49,6 +53,33 @@
           "type": "description",
           "settings": {}
         },
+        "collapsible_tab_3yzyLA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Processing & Shipping Time",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_jTnTbP": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "100% Money-back",
+            "icon": "return",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_ELdwmi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "washing",
+            "content": "",
+            "page": ""
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -60,10 +91,14 @@
         "vendor",
         "title",
         "price",
+        "product_type_VYfx8A",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
+        "collapsible_tab_3yzyLA",
+        "collapsible_tab_jTnTbP",
+        "collapsible_tab_ELdwmi",
         "share"
       ],
       "settings": {
