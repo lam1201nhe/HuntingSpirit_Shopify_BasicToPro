@@ -196,13 +196,15 @@
                   <div class="product__description collapsed rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {{ product.description |  strip_html}}
                   </div>
-                  <button class="toggle-description-button">
-                    <span class="show-more-text">Show more</span>
-                    <span class="show-less-text">Show less</span>
-                    <svg class="icon icon-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                  </button>
+                  <div class="toggle-description-button_wrapper">
+                    <button class="toggle-description-button">
+                      <span class="show-more-text">Show more</span>
+                      <span class="show-less-text">Show less</span>
+                      <svg class="icon icon-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </button>
+                  </div>
                 {%- endif -%}
               {%- when 'sku' -%}
                 <p

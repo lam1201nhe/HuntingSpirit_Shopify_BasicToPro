@@ -329,7 +329,7 @@ a.product__text {
   max-height: 1000px;
 }
 
-Tạo hiệu ứng mờ dần ở cuối phần văn bản khi bị thu gọn
+/* Tạo hiệu ứng mờ dần ở cuối phần văn bản khi bị thu gọn */
 .product__description.collapsed::after {
   content: "";
   position: absolute;
@@ -341,18 +341,24 @@ Tạo hiệu ứng mờ dần ở cuối phần văn bản khi bị thu gọn
   pointer-events: none;
 }
 
+.toggle-description-button_wrapepr {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .toggle-description-button {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fff;
-  border: 1px solid #ddd;
+  border: none;
   color: #333;
   font-size: 14px;
   cursor: pointer;
-  padding: 8px 16px;
-  margin-top: 10px;
-  border-radius: 4px;
+  padding: 4px 0px;
+  /* margin-top: 10px; */
+  /* border-radius: 4px; */
   transition: all 0.2s ease;
 }
 
