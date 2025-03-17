@@ -25,6 +25,10 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.type-option.active {
+  border: 2px solid #e74c3c;
+}
+
 /* Thêm style cho trạng thái disabled */
 .type-option.disabled {
   cursor: not-allowed;
@@ -37,9 +41,6 @@
 .type-option.disabled:hover {
   transform: none;
   box-shadow: none;
-}
-.type-option.active {
-  border: 2px solid #e74c3c;
 }
 
 .type-option img {
@@ -62,7 +63,7 @@
 
 .quick-add-modal__content .product-type-selector {
   display: none !important;
-} 
+}
 </style>
 
 <div class="product-type-selector">
@@ -140,6 +141,19 @@
       window.location.href = `${baseUrl.replace(/\/$/, '')}/${newType}${currentUrl.includes('?') ? '?' + currentUrl.split('?')[1] : ''}`;
     });
   });
+  
+  // Sử dụng JavaScript để thêm inline style trực tiếp vào các phần tử disabled
+document.querySelectorAll('.type-option.disabled').forEach(el => {
+  el.style.pointerEvents = 'none';
+  el.style.cursor = 'not-allowed';
+  el.style.opacity = '0.5';
+  el.onclick = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  };
 });
+});
+
 
 </script>
