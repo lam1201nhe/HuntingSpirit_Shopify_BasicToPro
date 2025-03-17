@@ -341,12 +341,6 @@ a.product__text {
   pointer-events: none;
 }
 
-.toggle-description-button_wrapepr {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 /* COmment */
 
 .toggle-description-button {
