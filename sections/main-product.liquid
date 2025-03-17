@@ -195,7 +195,7 @@
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     <p>
-                    {{ product.description }}
+                    {{ product.description | strip_html }}
                     </p>
                   </div>
                 {%- endif -%}
