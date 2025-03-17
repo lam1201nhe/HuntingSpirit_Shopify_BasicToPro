@@ -143,6 +143,7 @@
         "column_9XXQ4A": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/tea-leaf.png",
             "title": "<strong>Green Contribution</strong>",
             "text": "<p>We plant a tree for every order placed.</p>",
             "link_label": "",
