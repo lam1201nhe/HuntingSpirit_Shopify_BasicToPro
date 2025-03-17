@@ -123,6 +123,7 @@
         "column_rynHfa": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/fast-delivery.png",
             "title": "<strong>Instant Tracking Update</strong>",
             "text": "<p>Get your order status updated instantly for peace of mind.</p>",
             "link_label": "",
@@ -132,6 +133,7 @@
         "column_xrYUtV": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/save-money.png",
             "title": "<strong>100% Money-Back</strong>",
             "text": "<p>Full refund under policy conditions.</p>",
             "link_label": "",
@@ -150,6 +152,7 @@
         "column_ahRgxN": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/support.png",
             "title": "<strong>24/7 Customer Support</strong>",
             "text": "<p>Enjoy fast and reliable customer support anytime.</p>",
             "link_label": "",
