@@ -194,7 +194,9 @@
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description | strip_html }}
+                    <p>
+                    {{ product.description }}
+                    </p>
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}
