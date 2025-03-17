@@ -329,7 +329,7 @@ a.product__text {
   max-height: 1000px;
 }
 
-Tạo hiệu ứng mờ dần ở cuối phần văn bản khi bị thu gọn
+/* Tạo hiệu ứng mờ dần ở cuối phần văn bản khi bị thu gọn */
 .product__description.collapsed::after {
   content: "";
   position: absolute;
