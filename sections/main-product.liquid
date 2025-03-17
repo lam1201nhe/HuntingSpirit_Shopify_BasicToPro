@@ -194,10 +194,15 @@
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    <p>
-                    {{ product.description | strip_html }}
-                    </p>
+                    {{ product.description |  strip_html}}
                   </div>
+                  <button class="read-more-button">
+                    <span class="show-more">Show more</span>
+                    <span class="show-less">Show less</span>
+                    <svg class="icon icon-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                  </button>
                 {%- endif -%}
               {%- when 'sku' -%}
                 <p
@@ -726,6 +731,9 @@
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
+
+    <script src="{{ 'section-main-product.js' | asset_url }}" defer="defer"></script>
+    
   </div>
 </product-info>
 

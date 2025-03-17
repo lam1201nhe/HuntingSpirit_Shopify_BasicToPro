@@ -315,6 +315,70 @@ a.product__text {
   font-weight: 600;
 }
 
+.product__description {
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.product-description.collapsed {
+  max-height: 150px;
+}
+
+.product-description.expanded {
+  max-height: 1000px;
+}
+
+/* Tạo hiệu ứng mờ dần ở cuối phần văn bản khi bị thu gọn */
+.product__description.collapsed::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  pointer-events: none;
+}
+
+.read-more-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.read-more-button:hover {
+  background-color: #f5f5f5;
+}
+
+.read-more-button .icon-arrow {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Hiển thị/ẩn các text và xoay mũi tên */
+.product__description.collapsed + .read-more-button .show-less {
+  display: none;
+}
+
+.product__description.expanded + .read-more-button .show-more {
+  display: none;
+}
+
+.product__description.expanded + .read-more-button .icon-arrow {
+  transform: rotate(180deg);
+}
+
 .product--no-media .product__title,
 .product--no-media .product__text,
 .product--no-media .product__tax,
