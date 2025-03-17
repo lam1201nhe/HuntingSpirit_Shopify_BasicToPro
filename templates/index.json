@@ -115,7 +115,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "1",
+        "collection": "best-seller",
         "products_to_show": 4,
         "title": "Featured products",
         "heading_size": "h1",
@@ -292,7 +292,6 @@
         "column_GMKt3T": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/happy-svgrepo-com.png",
             "title": "Column",
             "text": "",
             "link_label": "",
@@ -302,7 +301,6 @@
         "column_JnfYyC": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/star-svgrepo-com.png",
             "title": "Column",
             "text": "",
             "link_label": "",
@@ -312,7 +310,6 @@
         "column_4Vhz6F": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/cart-check-svgrepo-com.png",
             "title": "Column",
             "text": "",
             "link_label": "",
