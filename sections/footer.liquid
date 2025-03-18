@@ -176,7 +176,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
           {%- if form.errors -%}
           <small class="newsletter-form__message form__message" id="ContactFooter-error">
             <span class="svg-wrapper">
-              {{- 'icon-error.svg' | inline_asset_content -}}
+              {{- 'icon-error.svg' | inline_asset_content -}}      
             </span>
             {{- form.errors.translated_fields.email | capitalize }}
             {{ form.errors.messages.email -}}
@@ -196,6 +196,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
       </div>
       {%- endif -%}
 
+      {% comment %} Fuck u {% endcomment %}
       {% comment %} Footer Payment {% endcomment %}
       <div class="footer__column footer__column--info">
         {%- if section.settings.payment_enable -%}
