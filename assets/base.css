@@ -124,6 +124,9 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   }
 }
 
+
+
+
 @media screen and (min-width: 990px) {
   .header:not(.drawer-menu).page-width {
     padding-left: 5rem;
@@ -2403,6 +2406,12 @@ input[type='checkbox'] {
     grid-template-areas:
       'left-icons heading icons'
       'navigation navigation navigation';
+  }
+
+  .header--top-middle {
+    grid-template-areas: "heading navigation icons";
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 2rem;
   }
 
   .header--top-center.drawer-menu {
