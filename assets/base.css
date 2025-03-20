@@ -129,6 +129,25 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
     grid-template-areas: "heading navigation icons";
     grid-template-columns: auto 1fr auto;
   }
+
+  .header--top-middle .header__inline-menu {
+    margin-left: 0;
+    justify-self: center;
+    width: 100%;
+  }
+
+  .header--top-middle .header__inline-menu > .list-menu--inline {
+    justify-content: center;
+  }
+
+  .header--top-middle .header__heading-link {
+    margin-left: -0.75rem;
+  }
+
+  .header--top-middle .header__heading,
+  .header--top-middle .header__heading-link {
+    justify-self: start;
+  }
 }
 
 
