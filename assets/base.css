@@ -124,7 +124,12 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   }
 }
 
-
+@media screen and (min-width: 990px) {
+  .header--top-middle {
+    grid-template-areas: "heading navigation icons";
+    grid-template-columns: auto 1fr auto;
+  }
+}
 
 
 @media screen and (min-width: 990px) {
